@@ -1,0 +1,4 @@
+{
+    "prettier.bracketSameLine": true,
+    "vs-code-prettier-eslint.prettierLast": true
+}
