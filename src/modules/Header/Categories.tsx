@@ -267,7 +267,7 @@ const Categories: FC<TypeCategories> = ({ data, onClose = () => { } }) => {
       >
         <Link href={`/catalog/all`}>Все</Link>
       </li>
-      {testCategories.slice(0, 6).map((category) => {
+      {testCategories.slice(0, 5).map((category) => {
         if (category.subcategories === null) {
           return (
             <li
@@ -292,9 +292,9 @@ const Categories: FC<TypeCategories> = ({ data, onClose = () => { } }) => {
         }
       })}
       <div className="hidden lg:block">
-        {testCategories.length > 6 && (
-          <Dropdown data={testCategories.slice(8, data.length - 7)}>
-            <li className="px-4 py-2 text-lg text-slate-500 transition-opacity border-transparent border-b-2 last:border-b-0 hover:opacity-80 hover:border-[#179c49] transition-colors sm:px-6 sm:py-3  lg:text-base">
+        {testCategories.length > 5 && (
+          <Dropdown data={testCategories.slice(6, data.length - 5)}>
+            <li className="px-4 py-2 text-lg text-slate-500 transition-opacity border-transparent border-b-2 last:border-b-0 hover:opacity-80 hover:border-[#179c49] transition-colors sm:px-6 sm:py-3 lg:text-base">
               <span>Остальное</span>
             </li>
           </Dropdown>
@@ -309,7 +309,7 @@ const Categories: FC<TypeCategories> = ({ data, onClose = () => { } }) => {
             </li>
           }
         >
-          {data.slice(7, data.length - 1).map((category) => (
+          {testCategories.slice(7, testCategories.length - 1).map((category) => (
             <li
               key={category.id}
               onClick={() => onClose()}
